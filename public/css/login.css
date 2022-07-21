@@ -184,6 +184,43 @@ form .image-wrapper.uploaded .preview-image img {
   margin: 1rem auto;
 }
 
+.main-main-design form .btn-div .loader-div {
+  display: none;
+}
+
+.btn-div.loading {
+  display: flex;
+  justify-content: center;
+  height: 60px;
+  background-color: transparent;
+  margin-bottom: 0;
+}
+
+.btn-div.loading .btn-summit {
+  display: none;
+}
+
+.main-main-design form .btn-div.loading .loader-div {
+  display: block;
+  position: relative;
+  width: 35px;
+  height: 35px;
+}
+
+.btn-div .loader-div .loader {
+  border: 3px solid transparent; /* Light grey */
+  border-top: 4px solid rgb(26 60 92); 
+  border-radius: 200px;
+  width: 35px;
+  height: 35px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
 .main-main-design form button {
   padding: 0.5rem 0;
   width: 100%;

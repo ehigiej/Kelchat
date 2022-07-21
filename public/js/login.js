@@ -17,6 +17,8 @@ const profilePicture = form.querySelector(".image-wrapper #image-file")
 const profileWrapper = form.querySelector(".image-wrapper")
 //Get the preview profile picture box
 const previewProfileBox = form.querySelector(".preview-wrapper .preview-image img")
+//get the submit btn box
+const submitBtnBox = form.querySelector(".btn-div")
 
 selectBtn.addEventListener("click", () => {
   selectBtn.classList.remove("error")
@@ -63,12 +65,12 @@ form.addEventListener("submit", async(e)=> {
     e.preventDefault()
     profileWrapper.classList.add("error")
   } else {
+    submitBtnBox.classList.add("loading")
     const form = new FormData()
     form.append('username', username.value)
     form.append("room", roomInput.value)
     form.append("image-file", file)
     let {data} = await axios.post("/upload", form)
-    console.log(data)
     sessionStorage.setItem("username", username.value)
     sessionStorage.setItem("room", roomInput.value)
     sessionStorage.setItem("imageSrc", data)
@@ -91,4 +93,3 @@ profilePicture.addEventListener('change', ()=> {
   }
 })
 
-console.log(profilePicture.files)
