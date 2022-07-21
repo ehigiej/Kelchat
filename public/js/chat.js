@@ -192,7 +192,7 @@ socket.on("roomUsers", ({room, users}) => {
 
 function serverRoom(room) {
     chatRoomName.innerHTML = room
-    chatRoomImg.src = `./images/${room}.png`
+    chatRoomImg.src = `./images/${room.toLocaleLowerCase()}.png`
     chatRoomImg.alt = room
     
     //Highlight the current room in all rooms ul
