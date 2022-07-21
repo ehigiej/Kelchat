@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+      <link rel="stylesheet" href="./css/chat.css">
+    <script src="./js/chat.js" defer></script>
+</head>
+<body>
+    <div class="chat-container">
+        <div class="user-room-div">
+            <div class="cancel-large">
+                <span class="material-icons">
+                    arrow_back
+                </span>
+            </div>
+            <div class="user-info-div">
+                <img src="./images/IMG_2019.jpg" alt="">
+                <div class="user-info-info">
+                    <h4 class="user-username">JesseJEsseJesse</h4>
+                    <div class="user-active">
+                        <span class="material-icons">
+                            chat_bubble
+                        </span>
+                        <p>Active</p>
+                    </div>
+                </div>
+            </div>
+            <div class="room-rooms">
+                <div class="room-channel">
+                    <span class="material-icons">
+                        keyboard_arrow_down
+                    </span>
+                    <p>Channel</p>
+                </div>
+                <ul class="room-channel-rooms">
+                    <li class="active">
+                        <img src="./images/general.png" alt="basketball">
+                        <h4>General</h4>
+                    </li>
+                    <li>
+                        <img src="./images/marketing.png" alt="market-charts">
+                        <h4>Marketing</h4>
+                    </li>
+                    <li>
+                        <img src="./images/engineering.png" alt="a laptop">
+                        <h4>Engineering</h4>
+                    </li>
+                    <li>
+                        <img src="./images/design.png" alt="a target">
+                        <h4>Design</h4>
+                    </li>
+                    <li>
+                        <img src="./images/logistics.png" alt="a boat">
+                        <h4>Logistics</h4>
+                    </li>
+                </ul>
+                <div class="leave-room-div">
+                    <a href="/">
+                        <p>Leave room</p>
+                        <span class="material-icons">
+                            exit_to_app
+                        </span>
+                    </a>
+                </div>
+            </div>
+            <div class="user-users-room-user">
+                <div class="room-channel">
+                    <span class="material-icons">
+                        navigate_next
+                    </span>
+                    <p>Users</p>
+                </div>
+                <ul class="all-users-in-room">
+                    <li class="active">
+                        <img src="./images/DSC_7723 (2).jpg" alt="">
+                        <h4>Jesseehiz</h4>
+                    </li>
+                    <li>
+                        <img src="./images/DSC_7723 (2).jpg" alt="">
+                        <h4>Jesseehiz</h4>
+                    </li>
+                    <li>
+                        <img src="./images/DSC_7723 (2).jpg" alt="">
+                        <h4>Jesseehiz</h4>
+                    </li>
+                    <li>
+                        <img src="./images/DSC_7723 (2).jpg" alt="">
+                        <h4>Jesseehiz</h4>
+                    </li>
+                    <li>
+                        <img src="./images/360_F_274898790_jFbZaYzodY0byzMZ06Ka1zp6kG5sVZc5.jpg" alt="">
+                        <h4>Jesseehiz</h4>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="chat-message-div">
+            <div class="chat-room-details">
+                <span class="material-icons menu-icon">
+                    menu
+                </span>
+                <div class="chat-room-info">
+                    <img src="./images/engineering.png" alt="a target">
+                    <h4>Engineering</h4>
+                </div>
+                <div class="chat-room-users">
+                    <div class="image-container-img">
+                        <img src="./images/DSC_7723 (2).jpg" alt="">
+                        <img src="./images/DSC_7723 (2).jpg" alt="">
+                        <img src="./images/DSC_7723 (2).jpg" alt="">
+                    </div>
+                    <div class="number-count">
+                        <p class="count-user">24</p>
+                        <p class="count-user main-count">2</p>
+                    </div>
+                </div>
+            </div>
+            <div class="messages-box">
+               
+            </div>
+            <div class="message-functions">
+                <p><span class="textarea" role="textbox" contenteditable></span></p>
+                <button>
+                    <span class="material-icons send-btn">
+                        send
+                    </span>
+                </button>
+            </div>
+        </div>
+        <div class="small-edit-box"></div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+</body>
+</html>

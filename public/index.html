@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet">
+    <link rel="stylesheet" href="./css/login.css">
+    <script src="./js/login.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js" 
+    integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="top-design">
+          <img src="./images/new-login-design.webp" alt="group-of-people">
+        </div>
+        <div class="main-design">
+            <h3 class="headline">One Space All People</h3>
+            <p class="desc-title">Join Rooms and chat with different people</p>
+            <div class="main-main-design">
+                <form enctype="multipart/form-data" method="post">
+                  <div class="image-wrapper">
+                    <input type="file" name="image-file" id="image-file" accept="image/*">
+                    <div class="preview-wrapper">
+                      <div class="preview-image">
+                        <img src="" alt="">
+                      </div>
+                      <label for="image-file">
+                        <span class="material-icons file-label">
+                          file_upload
+                        </span>
+                      </label>
+                    </div>
+                    <h3>Upload profile image</h3>
+                  </div>
+                  <input type="text" name="username" id="username-id" placeholder="username">
+                  <input type="text" name="room" id="room">
+                  <div class="select-menu">
+                      <div class="select-btn">
+                        <span class="sBtn-text">Select room</span>
+                        <span class="material-icons">
+                          navigate_next
+                        </span>
+                      </div>
+                    
+                      <ul class="options">
+                        <li class="option">
+                          <img src="./images/general.png" alt="basketball">
+                          <h4>General</h4>
+                        </li>
+                        <li class="option">
+                          <!-- <span class="option-text">Linkedin</span> -->
+                          <img src="./images/marketing.png" alt="market-charts">
+                          <h4>Marketing</h4>
+                        </li>
+                        <li class="option">
+                          <img src="./images/engineering.png" alt="a laptop">
+                          <h4>Engineering</h4>
+                        </li>
+                        <li class="option">
+                          <img src="./images/design.png" alt="a target">
+                          <h4>Design</h4>
+                        </li>
+                        <li class="option">
+                          <img src="./images/logistics.png" alt="a boat">
+                          <h4>Logistics</h4>
+                        </li>
+                      </ul>
+                  </div>
+                  <div class="btn-div">
+                    <button type="submit" class="btn-summit">Submit</button>
+                  </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
