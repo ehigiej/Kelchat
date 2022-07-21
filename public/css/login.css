@@ -25,45 +25,6 @@ body {
   object-fit: cover;
   object-position: center;
 }
-/* 
-.top-design .image-1 {
-  top: -13%;
-  left: 5px;
-}
-
-.top-design .image-2 {
-  top: -19%;
-  left: 43%;
-}
-
-.top-design .image-3 {
-  top: 1%;
-  left: 80%;
-}
-
-.top-design .image-4 {
-  top: 30%;
-  left: -3%;
-  height: 12vh;
-  width: 12vh;
-}
-
-.top-design .image-5 {
-  top: 25%;
-  left: 35%;
-  height: 10vh;
-  width: 10vh;
-}
-
-.top-design .image-6 {
-  top: 36%;
-  left: 60%;
-}
-
-.top-design .image-7 {
-  top: 60%;
-  left: 25%;
-} */
 
 .container .main-design {
   width: 85%;
@@ -235,7 +196,6 @@ form .image-wrapper.uploaded .preview-image img {
 
 .select-menu {
   width: 100%;
-  /* margin: 50px auto; */
 }
 
 .select-menu .select-btn {
@@ -403,17 +363,9 @@ form .image-wrapper.uploaded .preview-image img {
   display:none;
 }
 
-/* .wrapper label[for='file-input'] *{
-  vertical-align:middle;
-  cursor:pointer;
-} */
-
 .wrapper .label {
   border: 1px solid red;
   height: 100px;
   width: 300px;
 }
 
-/* .wrapper label[for='file-input'] span{
-  margin-left: 10px
-} */
