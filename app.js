@@ -41,14 +41,16 @@ io.on("connection", socket => {
         //emits to everybody except new user
         socket.broadcast.to(user.room).emit("message", messageFilter(kelbot, `${username} Joined the chat`, "kelbot.png"))
 
-        // Send Users and room info
+        //Send Users and room info
         io.to(user.room).emit("roomUsers", {
             room: user.room,
             users: getRoomUsers(user.room)
         })
     })
 
+    //Handle Messages from the User
     socket.on("chatMessage", (msg) => {
+        //Find User
         const user = getCurrentUser(socket.id)
         if(user) {
             socket.emit("userMessage", messageFilter(user.username, msg, user.imageSrc))
@@ -58,13 +60,14 @@ io.on("connection", socket => {
         }
     })
 
+    //Handle When A User disconnect
     socket.on('disconnect', ()=> {
         const user = userLeave(socket.id)
 
         if(user) {
             io.to(user.room).emit("message", messageFilter(kelbot, `${user.username} left the chat`, "kelbot.png"))
             
-            // Send Users and room info
+            //Send Users and room info
             io.to(user.room).emit("roomUsers", {
                 room: user.room,
                 users: getRoomUsers(user.room)
@@ -74,8 +77,7 @@ io.on("connection", socket => {
 })
 
 app.post("/upload", upload.single("image-file"), (req, res) => {
-    // console.log(req.file)
-    // console.log(req.body.room)
+    //Upload Image File To Server
     const filename = req.file.originalname
     res.send(filename)
 })
